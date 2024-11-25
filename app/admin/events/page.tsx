@@ -1,6 +1,9 @@
 
+import { EventForm } from "./form"
 export default function EventsPage() {
     return (
-        <h1>Events</h1>
+        <div className="flex items-center justify-center">
+            <EventForm />
+        </div>
     )
 }
