@@ -1,14 +1,71 @@
-import { BackgroundLines } from "@/components/ui/background-lines";
+'use client'
+import { HeroParallax } from "@/components/ui/hero-parallax";
 
 export default function Home() {
   return (
-    <BackgroundLines className="flex items-center justify-center w-full h-screen flex-col px-4 pb-20">
-      <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-5xl lg:text-7xl font-sans py-2 md:pb-10 relative z-20 font-bold tracking-tight">
-        Evently
-      </h2>
-      <p className="max-w-xl mx-auto text-md md:text-xl text-neutral-700 dark:text-neutral-400 text-center">
-        Los mejores eventos estan aqui
-      </p>
-    </BackgroundLines>
+
+    <HeroParallax products={products} />
   );
 }
+
+export const products = [
+  {
+    title: "Lolapalooza",
+    link: "/events",
+    thumbnail:
+      "/concert1.webp",
+  },
+  {
+    title: "Tomorrowland",
+    link: "/events",
+    thumbnail:"/concert2.jpg",
+  },
+  {
+    title: "Coachella",
+    link: "/events",
+    thumbnail:
+      "/concert3.jpg",
+  },
+  {
+    title: "Ultra Music Festival",
+    link: "/events",
+    thumbnail:
+      "/concert4.jpeg",
+  },
+  {
+    title: "EDC",
+    link: "/events",
+    thumbnail:
+      "/concert.jpg",
+  },
+  {
+    title: "Disco",
+    link: "/events",
+    thumbnail:
+      "/disco.jpeg",
+  },
+  {
+    title: "Disco",
+    link: "/events",
+    thumbnail:
+      "/disco2.jpg",
+  },
+  {
+    title: "Disco",
+    link: "/events",
+    thumbnail:
+      "/disco3.jpg",
+  },
+  {
+    title: "Disco",
+    link: "/events",
+    thumbnail:
+      "/disco4.jpg",
+  },
+  {
+    title: "Disco",
+    link: "/events",
+    thumbnail:
+      "/disco1.jpg",
+  }
+];

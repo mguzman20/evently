@@ -8,6 +8,14 @@ export async function getEvents() {
     return await prisma.event.findMany()
 }
 
+export async function getEvent(id: string) {
+    return await prisma.event.findUnique({
+        where: {
+            id: id
+        }
+    })
+}
+
 export async function createEvent(data: Event) {
     try {
 
