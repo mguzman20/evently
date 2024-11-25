@@ -3,7 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner"
 import { ThemeProvider } from "@/components/theme-provider"
-import { ModeToggle } from "@/components/theme-swich";
+import Navbar from "@/components/nabvar";
+import { Footer } from "@/components/footer";
 
 
 const geistSans = localFont({
@@ -30,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex w-full flex-1 flex-col items-center`}
       >
         <ThemeProvider
           attribute="class"
@@ -38,8 +39,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar />
         {children}
-        <ModeToggle />
+        <Footer />
         <Toaster />
         </ThemeProvider>
       </body>

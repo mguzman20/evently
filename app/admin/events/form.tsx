@@ -68,7 +68,7 @@ export function EventForm() {
 
     return (
         <Form {...form} >
-            <form onSubmit={form.handleSubmit(onSubmit)} className='gap-8 grid grid-cols-2'>
+            <form onSubmit={form.handleSubmit(onSubmit)} className='gap-8 grid grid-cols-1 md:grid-cols-2'>
                 <FormField
                     control={form.control}
                     name='name'
