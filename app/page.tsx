@@ -30,19 +30,13 @@ const products = [
     title: "Ultra Music Festival",
     link: "/events",
     thumbnail:
-      "/concert4.jpeg",
+      "/concert.jpg",
   },
   {
     title: "EDC",
     link: "/events",
     thumbnail:
-      "/concert.jpg",
-  },
-  {
-    title: "Disco",
-    link: "/events",
-    thumbnail:
-      "/disco.jpeg",
+      "/concert4.jpeg",
   },
   {
     title: "Disco",
@@ -54,18 +48,24 @@ const products = [
     title: "Disco",
     link: "/events",
     thumbnail:
+      "/disco.jpeg",
+  },
+  {
+    title: "Disco",
+    link: "/events",
+    thumbnail:
       "/disco3.jpg",
   },
   {
     title: "Disco",
     link: "/events",
     thumbnail:
-      "/disco4.jpg",
+      "/disco1.jpg",
   },
   {
     title: "Disco",
     link: "/events",
     thumbnail:
-      "/disco1.jpg",
+      "/disco4.jpg",
   }
 ];

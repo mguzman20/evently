@@ -1,5 +1,6 @@
 
 import { getEvent } from "@/actions/event";
+import TicketForm from "@/app/admin/tickets/form";
 
 export default async function Page({ params }: { params: { id: string }}) {
     const { id } = params;
@@ -10,9 +11,10 @@ export default async function Page({ params }: { params: { id: string }}) {
     }
 
     return (
-        <div className="mt-20">
+        <div className="">
             <h1>{event.name}</h1>
             <p>{event.description}</p>
+            <TicketForm eventId={id} />
         </div>
     );
 }

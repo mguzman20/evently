@@ -93,8 +93,8 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto pt-40 px-4 w-full  left-0 top-0">
-      <h1 className="bg-clip-text text-transparent bg-gradient-to-t from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-6xl  lg:text-7xl font-sans py-2 md:pb-10 relative z-20 font-bold tracking-tight">
+    <div className="max-w-7xl relative mx-auto pt-60 md:pt-20 px-4 w-full  left-0 top-0">
+      <h1 className="bg-clip-text text-transparent bg-gradient-to-b from-indigo-500 to-pink-500 text-6xl  lg:text-9xl font-sans py-2 md:pb-10 relative z-20 font-bold tracking-tight">
       Evently
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">

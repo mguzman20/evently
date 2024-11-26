@@ -9,14 +9,14 @@ export default async function Events() {
 
   return (
     <BackgroundLines >
-      <div className="container mx-auto p-4 mt-16">
-      <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-6xl font-sans py-2 md:pb-10 relative z-20 font-bold tracking-tight">
+      <div className="container mx-auto p-4 h-full">
+      <h2 className="bg-clip-text py-4 text-transparent text-center bg-gradient-to-b from-indigo-500 to-pink-500 text-4xl lg:text-6xl font-sans  md:pb-10 relative z-20 font-bold tracking-tight">
         Proximos eventos
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {events.map((event) => (
-          <Link href={`/events/${event.id}`} key={event.id} className="z-20 backdrop-blur-sm">
-            <Card className="flex flex-col backdrop-filter backdrop-blur-sm">
+          <Link href={`/events/${event.id}`} key={event.id} className="z-20">
+            <Card className="flex flex-col transition-all hover:scale-[1.02] bg-background/80  border-white/20 shadow-lg hover:shadow-xl">
               <CardHeader>
                 <CardTitle>{event.name}</CardTitle>
               </CardHeader>
