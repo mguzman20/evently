@@ -65,7 +65,7 @@ export default async function Component() {
                 <TableCell>
                   <DropdownMenu>
                     <DropdownMenuTrigger>
-                      <Button>
+                      <Button variant={'outline'}>
                         <MoreHorizontal />
                       </Button>
                     </DropdownMenuTrigger>
