@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox } from "lucide-react"
+import { Calendar, Home, Ticket } from "lucide-react"
 
 import {
   Sidebar,
@@ -21,12 +21,12 @@ const items = [
   {
     title: "Eventos",
     url: "/admin/events",
-    icon: Inbox,
+    icon: Calendar,
   },
   {
     title: "Tickets",
     url: "/admin/tickets",
-    icon: Calendar,
+    icon: Ticket,
   },
 ]
 
@@ -35,7 +35,7 @@ export function AppSidebar() {
     <Sidebar className="mt-16">
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel>Admin</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (

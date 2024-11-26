@@ -16,7 +16,7 @@ export default async function Events() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {events.map((event) => (
           <Link href={`/events/${event.id}`} key={event.id} className="z-20">
-            <Card className="flex flex-col transition-all hover:scale-[1.02] bg-background/80  border-white/20 shadow-lg hover:shadow-xl">
+            <Card className="flex flex-col transition-all hover:scale-[1.02] bg-background/80  border-foreground/20 shadow-lg hover:shadow-xl">
               <CardHeader>
                 <CardTitle>{event.name}</CardTitle>
               </CardHeader>
