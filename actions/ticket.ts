@@ -4,7 +4,11 @@ import prisma from "@/lib/prisma"
 import type { FormTicket } from "@/app/admin/tickets/form"
 
 export async function getTickets() {
-    return await prisma.ticket.findMany()
+    return await prisma.ticket.findMany({
+        include: {
+            event: true
+        }
+    })
 }
 
 export async function getTicket(id: string) {
