@@ -2,7 +2,7 @@
 import Link from "next/link"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent } from "@/components/ui/dropdown-menu"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
+import { Sheet, SheetTrigger, SheetContent, SheetTitle } from "@/components/ui/sheet"
 import { Ticket, Search, Menu } from "lucide-react"
 import { ModeToggle } from "./theme-swich"
 import {
@@ -71,34 +71,44 @@ export default function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="md:hidden">
+            <SheetTitle>
+                  <Link href="/" className="flex items-center gap-2" prefetch={false}>
+                <Ticket />
+                <p className="text-lg font-bold">Evently</p>
+                <span className="sr-only">Evently</span>
+              </Link>
+                </SheetTitle>
               <div className="grid gap-4 p-4">
-                <SheetTrigger>
+                <hr />
+                <SheetTrigger asChild>
+                  
                 <Link
                   href="/"
-                  className="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                  className=" font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                   prefetch={false}
                 >
                   Inicio
                 </Link>
                 </SheetTrigger>
-                <SheetTrigger>
+                <SheetTrigger asChild>
                 <Link
                   href="/events"
-                  className="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                  className=" font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                   prefetch={false}
                 >
                   Eventos
                 </Link>
                 </SheetTrigger>
-                <SheetTrigger>
+                <SheetTrigger asChild>
                 <Link
                   href="/admin"
-                  className="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+                  className=" font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
                   prefetch={false}
                 >
                   Admin
                 </Link>
                 </SheetTrigger>
+                <hr />
               </div>
             </SheetContent>
           </Sheet>
