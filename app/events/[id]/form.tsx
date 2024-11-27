@@ -58,8 +58,8 @@ export default function TicketForm({ eventId }: { eventId: string }) {
 
     return (
         <Sheet>
-            <SheetTrigger>
-                <Button>Create Ticket</Button>
+            <SheetTrigger asChild>
+                <Button size={'lg'}>Comprar</Button>
             </SheetTrigger>
             <SheetContent>
                 <SheetHeader>

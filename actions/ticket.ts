@@ -1,7 +1,7 @@
 'use server'
 
 import prisma from "@/lib/prisma"
-import type { FormTicket } from "@/app/admin/tickets/form"
+import type { FormTicket } from "@/app/events/[id]/form"
 
 export async function getTickets() {
     return await prisma.ticket.findMany({

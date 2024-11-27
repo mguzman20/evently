@@ -2,7 +2,6 @@
 import Link from "next/link"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent } from "@/components/ui/dropdown-menu"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { Ticket, Search, Menu } from "lucide-react"
 import { ModeToggle } from "./theme-swich"
@@ -13,6 +12,7 @@ import {
     NavigationMenuList,
   } from "@/components/ui/navigation-menu"
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
+import { SearchBox } from "@/components/search-box"
 
   
 
@@ -59,10 +59,7 @@ export default function Navbar() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-[300px] p-4">
-              <div className="relative">
-                <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-500 dark:text-gray-400" />
-                <Input type="search" placeholder="Search..." className="pl-8 w-full" />
-              </div>
+              <SearchBox />
             </DropdownMenuContent>
           </DropdownMenu>
           <ModeToggle />
@@ -75,6 +72,7 @@ export default function Navbar() {
             </SheetTrigger>
             <SheetContent side="left" className="md:hidden">
               <div className="grid gap-4 p-4">
+                <SheetTrigger>
                 <Link
                   href="/"
                   className="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
@@ -82,6 +80,8 @@ export default function Navbar() {
                 >
                   Inicio
                 </Link>
+                </SheetTrigger>
+                <SheetTrigger>
                 <Link
                   href="/events"
                   className="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
@@ -89,6 +89,8 @@ export default function Navbar() {
                 >
                   Eventos
                 </Link>
+                </SheetTrigger>
+                <SheetTrigger>
                 <Link
                   href="/admin"
                   className="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
@@ -96,6 +98,7 @@ export default function Navbar() {
                 >
                   Admin
                 </Link>
+                </SheetTrigger>
               </div>
             </SheetContent>
           </Sheet>
