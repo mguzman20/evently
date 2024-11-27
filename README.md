@@ -43,4 +43,5 @@ npm run dev
 - Landig page con eventos destacados.
 - Modo oscuro y claro.
 - Diseño responsivo.
+- Utilizacion de Next.js, Server Actions, React, Shadcn/ui, TailwindCSS, Prisma y PostgreSQL.
 
